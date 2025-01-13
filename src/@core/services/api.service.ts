@@ -1,8 +1,8 @@
-import { ApiErrorEnum, ApiErrorMessages } from '@core/enums';
-import { axiosClient } from '@core/interceptors';
-import { IApiResponse } from '@core/models/api-response.model';
-import { environment } from '@core/utils';
 import axios, { AxiosResponse, AxiosError, AxiosRequestConfig } from 'axios';
+import { environment } from '../utils/environment.util';
+import { axiosClient } from '../interceptors/http.interceptor';
+import { IApiResponse } from '../models/api-response.model';
+import { ApiErrorEnum, ApiErrorMessages } from '../enums/api-error.enum';
 
 export class ApiService {
     private static get apiUrl(): string {

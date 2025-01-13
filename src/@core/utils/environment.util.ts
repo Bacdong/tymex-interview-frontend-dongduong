@@ -17,23 +17,23 @@ export type AppEnvironment = {
 }
 
 const {
-    REACT_APP_BASE_URL,
-    REACT_APP_NAME,
-    REACT_APP_VERSION,
-    REACT_APP_URL,
-    REACT_APP_IS_PROD,
+    VITE_BASE_URL,
+    VITE_NAME,
+    VITE_VERSION,
+    VITE_URL,
+    VITE_IS_PROD,
 } = import.meta.env;
 
 export const environment: AppEnvironment = {
     apis: {
         default: {
-            url: REACT_APP_BASE_URL || '',
+            url: VITE_BASE_URL || '',
         }
     },
     app: {
-        name: REACT_APP_NAME || '',
-        version: REACT_APP_VERSION || '',
-        url: REACT_APP_URL || '',
-        isProd: Boolean(REACT_APP_IS_PROD),
+        name: VITE_NAME || '',
+        version: VITE_VERSION || '',
+        url: VITE_URL || '',
+        isProd: Boolean(VITE_IS_PROD),
     }
 };

@@ -1,6 +1,8 @@
-import { IApiResponse, IProduct, IQueryParams } from "@core/models";
+import { ApiConstant } from "../../@constants/api.constant";
+import { IApiResponse } from "../models/api-response.model";
+import { IQueryParams } from "../models/common.model";
+import { IProduct } from "../models/product.model";
 import { ApiService } from "./api.service";
-import { ApiConstant } from "@constants/api.constant";
 
 export class ProductService {
     public static readonly getAll = (params: IQueryParams = {}): Promise<Array<IProduct>> => {
