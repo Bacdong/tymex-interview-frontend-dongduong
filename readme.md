@@ -17,20 +17,20 @@
 
 * Install packages:
 
-```
+```bash
 bun install
 ```
 
 * Config environments
 
-```
+```bash
 vi /.env
 vi /.env.prod
 ```
 
 * App configurations
 
-```
+```bash
 vi /src/configs/app.config.tsx
 ```
 
