@@ -1,4 +1,4 @@
-import { EnumValues } from "./types";
+import { EnumValues } from './types';
 
 export enum GenderEnum {
     MALE = 'Male',
@@ -12,4 +12,4 @@ export const GenderValues: Readonly<Record<GenderType, string>> = {
     [GenderEnum.MALE]: 'GENDER.MALE',
     [GenderEnum.FEMALE]: 'GENDER.FEMALE',
     [GenderEnum.OTHERS]: 'GENDER.OTHERS',
-}
+};

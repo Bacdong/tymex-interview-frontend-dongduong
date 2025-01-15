@@ -1,4 +1,4 @@
-import { EnumValues } from "./types";
+import { EnumValues } from './types';
 
 // ** THEME
 export enum ProductThemeEnum {

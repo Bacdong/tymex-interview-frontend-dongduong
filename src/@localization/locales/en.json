@@ -1,0 +1,33 @@
+{
+    "GLOBAL.SUBMIT": "Submit",
+    "GLOBAL.SUBMITTING": "Submitting...",
+    "GLOBAL.LOGIN": "Login",
+    "GLOBAL.LOAD_MORE": "Load more",
+    "GLOBAL.LOADING_DATA": "Loading data...",
+
+    "SORT_BY.LOWEST": "Lowest",
+    "SORT_BY.HIGHEST": "Highest",
+
+    "GENDER.MALE": "Male",
+    "GENDER.FEMALE": "Female",
+    "GENDER.OTHERS": "Others",
+
+    "ONLINE_STATUS.ONLINE": "Online",
+    "ONLINE_STATUS.OFFLINE": "Offline",
+    "ONLINE_STATUS.IDLE": "Idle",
+    "ONLINE_STATUS.BUSY": "Busy",
+
+    "PRODUCT.THEME.HALLOWEEN": "Halloween",
+    "PRODUCT.THEME.COLORFUL": "Colorful",
+    "PRODUCT.THEME.LIGHT": "Light",
+    "PRODUCT.THEME.DARK": "Dark",
+    "PRODUCT.THEME.BASIC": "Basic",
+
+    "PRODUCT.TIER.PREMIUM": "Premium",
+    "PRODUCT.TIER.DELUXE": "Deluxe",
+    "PRODUCT.TIER.BASIC": "Basic",
+
+    "ERROR.MESSAGE.UNKNOWN": "Server error!",
+
+    "": ""
+}

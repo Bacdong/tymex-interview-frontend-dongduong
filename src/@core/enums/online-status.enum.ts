@@ -1,4 +1,4 @@
-import { EnumValues } from "./types";
+import { EnumValues } from './types';
 
 export enum OnlineStatusEnum {
     ONLINE = 'online',

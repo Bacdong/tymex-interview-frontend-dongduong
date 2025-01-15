@@ -1,4 +1,3 @@
-
 // import { LayoutProps } from '../../enums/types/common.type';
 // import './auth-layout.scss';
 
@@ -7,7 +6,7 @@
 //         <>{children}</>
 //     );
 // }
- 
+
 // export default AuthLayout;
 
 import { Outlet } from 'react-router-dom';
@@ -20,6 +19,6 @@ const AuthLayout = () => {
             <Outlet />
         </>
     );
-}
- 
+};
+
 export default AuthLayout;

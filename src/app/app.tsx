@@ -18,29 +18,49 @@ import './app.scss';
 import { RoutesConstant } from '../@constants';
 
 const App = () => {
+    // ** Initial axios interceptors
+    initialInterceptorsFactory();
 
-  // ** Initial axios interceptors
-  initialInterceptorsFactory();
+    return (
+        <ProductSearchProvider>
+            <Suspense fallback={'Loading or error...'}>
+                <Routes>
+                    <Route
+                        path='/'
+                        element={<MainLayout />}
+                    >
+                        <Route
+                            index
+                            element={<Navigate to={RoutesConstant.PRODUCT} />}
+                        />
+                        <Route
+                            path={RoutesConstant.PRODUCT}
+                            element={<Product />}
+                        />
+                    </Route>
 
-  return (
-    <ProductSearchProvider>
-      <Suspense fallback={'Loading or error...'}>
-        <Routes>
-          <Route path='/' element={<MainLayout />}>
-            <Route index element={<Navigate to={RoutesConstant.PRODUCT} />} />
-            <Route path={RoutesConstant.PRODUCT} element={<Product />} />
-          </Route>
+                    <Route
+                        path={RoutesConstant.AUTH}
+                        element={<AuthLayout />}
+                    >
+                        <Route
+                            index
+                            element={<Navigate to={RoutesConstant.AUTH_LOGIN} />}
+                        />
+                        <Route
+                            path={RoutesConstant.AUTH_LOGIN}
+                            element={<Login />}
+                        />
+                    </Route>
 
-          <Route path={RoutesConstant.AUTH} element={<AuthLayout />}>
-            <Route index element={<Navigate to={RoutesConstant.AUTH_LOGIN} />} />
-            <Route path={RoutesConstant.AUTH_LOGIN} element={<Login />} />
-          </Route>
-
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </Suspense>
-    </ProductSearchProvider>
-  );
+                    <Route
+                        path='*'
+                        element={<NotFound />}
+                    />
+                </Routes>
+            </Suspense>
+        </ProductSearchProvider>
+    );
 };
 
 export default App;

@@ -10,11 +10,19 @@ export const routes = createBrowserRouter([
         path: '',
         element: <MainLayout />,
         children: [
-            { index: true, element: <Navigate to={'/' + RoutesConstant.PRODUCT} replace /> },
+            {
+                index: true,
+                element: (
+                    <Navigate
+                        to={'/' + RoutesConstant.PRODUCT}
+                        replace
+                    />
+                ),
+            },
             // { path: RoutesConstant.PRODUCT, lazy: () => import('./product/index') as SafeAny }
             { path: RoutesConstant.PRODUCT, element: <Product /> },
         ],
-    }
+    },
 ]);
 
 export const Router = (): JSX.Element => {

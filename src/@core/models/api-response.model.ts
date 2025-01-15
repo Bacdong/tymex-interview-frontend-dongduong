@@ -1,4 +1,4 @@
-import { SafeAny } from "@core/enums";
+import { SafeAny } from '../enums/types/common.type';
 
 export interface IApiResponse<T = SafeAny> {
     data: T;

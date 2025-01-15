@@ -1,0 +1,10 @@
+.main-layout {
+    background-image: url('../../../assets/images/common/tymex-background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .ant-layout-sider {
+        background: transparent !important;
+    }
+}

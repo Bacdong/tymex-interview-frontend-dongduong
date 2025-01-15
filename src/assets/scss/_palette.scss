@@ -1,0 +1,90 @@
+/* COLORS PALETTE */
+$palette: (
+    primary: (
+        contrast-text: #fff,
+        light: #4eb0b1,
+        dark: #18857f,
+        main: #000,
+    ),
+
+    secondary: (
+        contrast-text: #fff,
+        light: #4eb0b1,
+        dark: #18857f,
+        main: #000,
+    ),
+
+    success: (
+        contrast-text: #fff,
+        light: #4eb0b1,
+        dark: #18857f,
+        main: #000,
+    ),
+
+    warning: (
+        contrast-text: #fff,
+        light: #4eb0b1,
+        dark: #18857f,
+        main: #000,
+    ),
+
+    info: (
+        contrast-text: #fff,
+        light: #4eb0b1,
+        dark: #18857f,
+        main: #000,
+    ),
+
+    error: (
+        contrast-text: #fff,
+        light: #4eb0b1,
+        dark: #18857f,
+        main: #000,
+    ),
+
+    text: (
+        primary: #fff,
+        secondary: #000,
+        disabled: #c0c0c0,
+        hint: #9e9e9e,
+        caption: #ccc,
+    ),
+
+    divider: (
+        light: #ccc,
+        dark: #fff,
+        main: #000,
+    ),
+
+    background: (
+        default: #fff,
+        paper: #fff,
+        dark: #303030,
+        light: #f6f6f6,
+    ),
+
+    action: (
+        active: #ccc,
+        hover: #ccc,
+        selected: #ccc,
+        disabled: #ccc,
+        disabled-background: #ccc,
+        focus: #ccc,
+    ),
+);
+
+/* Updated theme-palette function using map.get */
+@use 'sass:map';
+
+@function theme-palette($theme, $name) {
+    @if map.has-key($palette, $theme) {
+        $theme-map: map.get($palette, $theme);
+        @if map.has-key($theme-map, $name) {
+            @return map.get($theme-map, $name);
+        } @else {
+            @error "The property `#{$name}` does not exist in the `#{$theme}` theme.";
+        }
+    } @else {
+        @error "The theme `#{$theme}` does not exist in the palette.";
+    }
+}

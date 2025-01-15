@@ -6,7 +6,11 @@ import { ApiErrorEnum, ApiErrorMessages } from '../enums/api-error.enum';
 
 export class ApiService {
     private static get apiUrl(): string {
-        const { apis: { default: { url } } } = environment;
+        const {
+            apis: {
+                default: { url },
+            },
+        } = environment;
 
         return url || '';
     }
@@ -16,28 +20,28 @@ export class ApiService {
             .get<T>(this.apiUrl + path, { params })
             .then(this.formatResponse)
             .catch(this.formatError);
-    }
+    };
 
     public static post = <T>(path: string, body = {}) => {
         return axiosClient
             .post<T>(this.apiUrl + path, body)
             .then(this.formatResponse)
             .catch(this.formatError);
-    }
+    };
 
     public static put = <T>(path: string, body = {}) => {
         return axiosClient
             .put<T>(this.apiUrl + path, body)
             .then(this.formatResponse)
             .catch(this.formatError);
-    }
+    };
 
     public static delete = <T>(path: string) => {
         return axiosClient
             .delete<T>(this.apiUrl + path)
             .then(this.formatResponse)
             .catch(this.formatError);
-    }
+    };
 
     private static readonly formatResponse = (response: AxiosResponse): IApiResponse => {
         return {

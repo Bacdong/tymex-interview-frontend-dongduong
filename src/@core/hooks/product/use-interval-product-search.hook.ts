@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { AppConstant } from "../../../@constants/app.constant";
-import { useProductSearchContext } from "../../contexts/product-search.context";
-import useInterval from "../use-interval.hook";
-import useProductSearch from "./use-product-search.hook";
+import { useEffect } from 'react';
+import { AppConstant } from '../../../@constants/app.constant';
+import { useProductSearchContext } from '../../contexts/product-search.context';
+import useInterval from '../use-interval.hook';
+import useProductSearch from './use-product-search.hook';
 
 const useIntervalProductSearch = () => {
     // ** Contexts
@@ -24,6 +24,6 @@ const useIntervalProductSearch = () => {
     }, [data]);
 
     return { isLoading, data };
-}
- 
+};
+
 export default useIntervalProductSearch;

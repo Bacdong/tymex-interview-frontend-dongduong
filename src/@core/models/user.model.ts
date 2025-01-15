@@ -1,5 +1,5 @@
-import { OnlineStatusType } from "../enums";
-import { GenderType } from "../enums/gender.enum";
+import { OnlineStatusType } from '../enums';
+import { GenderType } from '../enums/gender.enum';
 
 export interface IUser {
     id: number;

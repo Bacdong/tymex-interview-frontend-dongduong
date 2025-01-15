@@ -1,5 +1,5 @@
-import { IProduct, IQueryParams } from "@core/models";
-import { createContext, ReactNode, useContext, useMemo, useState } from "react";
+import { IProduct, IQueryParams } from '@core/models';
+import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
 export type ProductSearchContextValue = {
     searchQuery: IQueryParams;
@@ -52,18 +52,8 @@ export const ProductSearchProvider = ({ children }: { children: ReactNode }) => 
             products,
             saveProducts,
         }),
-        [
-            searchQuery,
-            saveSearchQuery,
-
-            products,
-            saveProducts,
-        ]
+        [searchQuery, saveSearchQuery, products, saveProducts],
     );
 
-    return (
-        <ProductSearchContext.Provider value={contextValues}>
-            {children}
-        </ProductSearchContext.Provider>
-    )
+    return <ProductSearchContext.Provider value={contextValues}>{children}</ProductSearchContext.Provider>;
 };

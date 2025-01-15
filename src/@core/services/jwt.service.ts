@@ -1,4 +1,4 @@
-import { StorageKeyConstant } from "../../@constants/storage-key.constant";
+import { StorageKeyConstant } from '../../@constants/storage-key.constant';
 
 export class JwtService {
     private static readonly storage = typeof window !== 'undefined' ? window.localStorage : null;

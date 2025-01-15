@@ -1,11 +1,17 @@
-import axios, { AxiosError, AxiosInstance, AxiosResponse, CreateAxiosDefaults, InternalAxiosRequestConfig } from "axios";
-import { environment } from "../utils/environment.util";
-import { JwtService } from "../services/jwt.service";
+import axios, {
+    AxiosError,
+    AxiosInstance,
+    AxiosResponse,
+    CreateAxiosDefaults,
+    InternalAxiosRequestConfig,
+} from 'axios';
+import { environment } from '../utils/environment.util';
+import { JwtService } from '../services/jwt.service';
 
 const {
     apis: {
         default: { url },
-    }
+    },
 } = environment;
 
 const axiosOptions: CreateAxiosDefaults = {

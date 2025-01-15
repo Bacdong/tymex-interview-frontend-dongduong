@@ -1,6 +1,6 @@
-import { ProductThemeType } from "../enums";
-import { IProductImage } from "./media.model";
-import { IUser } from "./user.model";
+import { ProductThemeType } from '../enums';
+import { IProductImage } from './media.model';
+import { IUser } from './user.model';
 
 export interface ICategory {
     name: string;
