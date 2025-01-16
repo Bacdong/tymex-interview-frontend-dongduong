@@ -4,6 +4,7 @@
     "GLOBAL.LOGIN": "Login",
     "GLOBAL.LOAD_MORE": "Load more",
     "GLOBAL.LOADING_DATA": "Loading data...",
+    "GLOBAL.CONNECT_WALLET": "Connect wallet",
 
     "SORT_BY.LOWEST": "Lowest",
     "SORT_BY.HIGHEST": "Highest",
@@ -11,6 +12,9 @@
     "GENDER.MALE": "Male",
     "GENDER.FEMALE": "Female",
     "GENDER.OTHERS": "Others",
+
+    "LOCALE.ENGLISH": "English",
+    "LOCALE.VIETNAMESE": "Vietnamese",
 
     "ONLINE_STATUS.ONLINE": "Online",
     "ONLINE_STATUS.OFFLINE": "Offline",

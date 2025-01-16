@@ -5,4 +5,5 @@ export * from './interceptors';
 export * from './layouts';
 export * from './models';
 export * from './services';
+export * from './providers';
 export * from './utils';

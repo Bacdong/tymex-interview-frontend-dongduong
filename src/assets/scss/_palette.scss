@@ -51,16 +51,21 @@ $palette: (
     ),
 
     divider: (
-        light: #ccc,
+        light: #3a3841,
         dark: #fff,
-        main: #000,
+        main: #3a3841,
     ),
 
     background: (
         default: #fff,
-        paper: #fff,
+        paper: #17161a,
         dark: #303030,
         light: #f6f6f6,
+    ),
+
+    gradient: (
+        active: linear-gradient(to right, #da458f 0%, #da34dd 100%),
+        text-active: linear-gradient(to right, #da458f 0%, #da34dd 100%),
     ),
 
     action: (

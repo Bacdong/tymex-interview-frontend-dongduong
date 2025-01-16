@@ -8,20 +8,37 @@ import { GlobalOutlined, DownOutlined } from '@ant-design/icons';
 
 import { LocaleEnum, LocaleType, LocaleValues } from '../../../../enums';
 import { AppConstant } from '../../../../../@constants';
+import { useTranslation } from 'react-i18next';
+
+// ** Import Styles
+import './main-layout-header.scss';
+import { useLocaleContext } from '../../../../contexts';
 
 const MainLayoutHeader = () => {
-    const locales: MenuProps['items'] = useMemo(() => {
-        return Object.values(LocaleEnum).map(locale => ({ key: locale, label: LocaleValues[locale as LocaleType] }));
-    }, []);
+    // ** Translation
+    const { t } = useTranslation();
 
-    console.debug({ locales });
+    // ** Contexts
+    const { saveLocale } = useLocaleContext();
+
+    // ** States
+    const locales: MenuProps['items'] = useMemo(() => {
+        return Object.values(LocaleEnum).map(locale => ({
+            key: locale,
+            label: t(LocaleValues[locale as LocaleType]),
+            onClick: () => {
+                console.debug({ locale: locale as LocaleType });
+                saveLocale(locale as LocaleType);
+            },
+        }));
+    }, [t]);
 
     return (
         <header className='main-layout-header fixed left-0 right-0 top-0 h-auto'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto py-8'>
                 <div className='flex w-full items-center justify-between gap-6'>
                     <nav className='h-full w-full'>
-                        <ul className='flex flex-1 items-center gap-6'>
+                        <ul className='flex flex-1 items-center gap-24'>
                             <li>
                                 <a href=''>Home</a>
                             </li>
@@ -32,7 +49,12 @@ const MainLayoutHeader = () => {
                                 <a href=''>Our Teams</a>
                             </li>
                             <li>
-                                <a href=''>Marketplace</a>
+                                <a
+                                    className='active'
+                                    href=''
+                                >
+                                    Marketplace
+                                </a>
                             </li>
                             <li>
                                 <a href=''>Roadmap</a>
@@ -43,15 +65,21 @@ const MainLayoutHeader = () => {
                         </ul>
                     </nav>
 
-                    <div className='flex min-w-[30rem] items-center justify-end gap-6'>
-                        <button type='button'>Connect wallet</button>
+                    <div className='flex min-w-[30rem] items-center justify-end gap-12'>
+                        <button
+                            type='button'
+                            className='rounded-md px-6 py-4 font-semibold capitalize transition-opacity duration-150 will-change-auto hover:opacity-80'
+                        >
+                            {t('GLOBAL.CONNECT_WALLET')}
+                        </button>
+
                         <Dropdown
                             menu={{
                                 items: locales,
                                 selectable: true,
                                 defaultSelectedKeys: [AppConstant.DEFAULT_LOCALE],
                             }}
-                            placement='bottomCenter'
+                            placement='bottom'
                             arrow
                         >
                             <div className='flex cursor-pointer items-center gap-4'>

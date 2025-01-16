@@ -1,0 +1,9 @@
+@use '../../../../../assets/scss/palette' as palette;
+
+.main-layout-footer {
+    background-color: palette.theme-palette(background, paper);
+
+    hr {
+        border-color: palette.theme-palette(divider, main);
+    }
+}
