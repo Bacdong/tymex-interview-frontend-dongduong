@@ -16,7 +16,8 @@
         will-change: auto;
         transition: all 125ms linear;
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             color: palette.theme-palette(primary, main);
         }
 
