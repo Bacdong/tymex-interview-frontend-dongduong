@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 
 // ** Import Translation Resources
 import en from './locales/en.json';
-import vi from './locales/en.json';
+import vi from './locales/vi.json';
 
 // ** Import Other Resources
 import { AppConstant } from '../@constants';
@@ -21,7 +21,7 @@ i18n.use(initReactI18next).init({
     interpolation: {
         escapeValue: false,
     },
-    debug: import.meta.env.NODE_ENV === 'development',
+    debug: import.meta.env.DEV,
 });
 
 export default i18n;

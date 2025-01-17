@@ -48,15 +48,13 @@ const MainLayoutHeader = () => {
                             <li>
                                 <a href=''>Our Teams</a>
                             </li>
-                            <li>
+                            <li className='flex items-center gap-4'>
                                 <a
                                     className='active'
                                     href=''
                                 >
                                     Marketplace
                                 </a>
-                            </li>
-                            <li>
                                 <a href=''>Roadmap</a>
                             </li>
                             <li>

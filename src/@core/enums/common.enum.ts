@@ -25,3 +25,12 @@ export const LocaleValues: Readonly<Record<LocaleType, string>> = {
     [LocaleEnum.EN]: 'LOCALE.ENGLISH',
     [LocaleEnum.VI]: 'LOCALE.VIETNAMESE',
 };
+
+// ** Node Environments
+export enum NodeEnvEnum {
+    PRODUCTION = 'production',
+    DEVELOPMENT = 'development',
+    TEST = 'test',
+}
+
+export type NodeEnvType = EnumValues<typeof NodeEnvEnum>;

@@ -13,8 +13,8 @@
     "GENDER.FEMALE": "Female",
     "GENDER.OTHERS": "Others",
 
-    "LOCALE.ENGLISH": "English",
-    "LOCALE.VIETNAMESE": "Vietnamese",
+    "LOCALE.ENGLISH": "Tiếng Anh",
+    "LOCALE.VIETNAMESE": "Tiếng Việt",
 
     "ONLINE_STATUS.ONLINE": "Online",
     "ONLINE_STATUS.OFFLINE": "Offline",
