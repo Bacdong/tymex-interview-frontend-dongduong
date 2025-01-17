@@ -13,10 +13,15 @@ import { useTranslation } from 'react-i18next';
 // ** Import Styles
 import './main-layout-header.scss';
 import { useLocaleContext } from '../../../../contexts';
+import useBreakpoint from '../../../../hooks/common/use-breakpoint.hook';
+import MainLayoutDrawer from '../main-layout-drawer';
 
 const MainLayoutHeader = () => {
     // ** Translation
     const { t } = useTranslation();
+
+    // ** Hooks
+    const { xl } = useBreakpoint();
 
     // ** Contexts
     const { saveLocale } = useLocaleContext();
@@ -37,36 +42,39 @@ const MainLayoutHeader = () => {
         <header className='main-layout-header fixed left-0 right-0 top-0 h-auto'>
             <div className='container mx-auto py-8'>
                 <div className='flex w-full items-center justify-between gap-6'>
-                    <nav className='h-full w-full'>
-                        <ul className='flex flex-1 items-center gap-24'>
-                            <li>
-                                <a href=''>Home</a>
-                            </li>
-                            <li>
-                                <a href=''>About Us</a>
-                            </li>
-                            <li>
-                                <a href=''>Our Teams</a>
-                            </li>
-                            <li className='flex items-center gap-4'>
-                                <a
-                                    className='active'
-                                    href=''
-                                >
-                                    Marketplace
-                                </a>
-                                <a href=''>Roadmap</a>
-                            </li>
-                            <li>
-                                <a href=''>Whitepaper</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    {xl && (
+                        <nav className='h-full w-full'>
+                            <ul className='flex flex-1 items-center gap-24'>
+                                <li>
+                                    <a href=''>Home</a>
+                                </li>
+                                <li>
+                                    <a href=''>About Us</a>
+                                </li>
+                                <li>
+                                    <a href=''>Our Teams</a>
+                                </li>
+                                <li className='flex items-center gap-4'>
+                                    <a
+                                        className='active'
+                                        href=''
+                                    >
+                                        Marketplace
+                                    </a>
+                                    <a href=''>Roadmap</a>
+                                </li>
+                                <li>
+                                    <a href=''>Whitepaper</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    )}
+                    <MainLayoutDrawer />
 
                     <div className='flex min-w-[30rem] items-center justify-end gap-12'>
                         <button
                             type='button'
-                            className='rounded-md px-6 py-4 font-semibold capitalize transition-opacity duration-150 will-change-auto hover:opacity-80'
+                            className='primary rounded-md px-6 py-4 font-semibold capitalize transition-opacity duration-150 will-change-auto hover:opacity-80'
                         >
                             {t('GLOBAL.CONNECT_WALLET')}
                         </button>

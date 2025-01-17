@@ -45,6 +45,8 @@
     }
 
     button {
-        background-image: palette.theme-palette(gradient, active);
+        &.primary {
+            background-image: palette.theme-palette(gradient, active);
+        }
     }
 }

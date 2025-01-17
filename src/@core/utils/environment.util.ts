@@ -13,6 +13,7 @@ export type AppEnvironment = {
         version: string;
         url: string;
         isProd: boolean;
+        packageVersioning: typeof __APP_VERSION__;
     };
 };
 
@@ -29,5 +30,6 @@ export const environment: AppEnvironment = {
         version: VITE_VERSION || '',
         url: VITE_URL || '',
         isProd: Boolean(VITE_IS_PROD),
+        packageVersioning: __APP_VERSION__,
     },
 };

@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import MainLayout from '../layouts/main-layout';
 import { RoutesConstant } from '../../@constants/routes.constant';
 import AuthLayout from '../layouts/auth-layout';
-import usePaceLoader from '../hooks/use-pace-loader.hook';
+import usePaceLoader from '../hooks/common/use-pace-loader.hook';
 
 // ** Lazy Load Pages
 const Product = lazy(() => import('../../app/product'));

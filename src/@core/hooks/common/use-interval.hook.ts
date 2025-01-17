@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { AppConstant } from '../../@constants/app.constant';
+import { AppConstant } from '../../../@constants/app.constant';
 
 // ** Custom hook for setting up an interval using an arrow function in TypeScript
 const useInterval = (callback: () => void, delay = AppConstant.REFETCH_DURATION) => {

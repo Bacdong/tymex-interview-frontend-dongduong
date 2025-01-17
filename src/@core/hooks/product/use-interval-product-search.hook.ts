@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { AppConstant } from '../../../@constants/app.constant';
 import { useProductSearchContext } from '../../contexts/product-search.context';
-import useInterval from '../use-interval.hook';
+import useInterval from '../common/use-interval.hook';
 import useProductSearch from './use-product-search.hook';
 
 const useIntervalProductSearch = () => {

@@ -25,13 +25,15 @@ bun install
 
 ```bash
 vi /.env
-vi /.env.prod
+vi /.env.development
+vi /.env.staging
+vi /.env.production
 ```
 
 * App configurations
 
 ```bash
-vi /src/configs/app.config.tsx
+vi /src/@constants/app.constant.tsx
 ```
 
 ## Web Serve
@@ -47,27 +49,20 @@ bun start
 
 ```bash
 bun build
+bun build:development
+bun build:staging
+bun build:production
 ```
 
-## Release With Versioning
-
-* PATCH Version
-
-```bash
-bun release:patch
-```
-
-* MINOR Version
-
-```bash
-bun release:minor
-```
-
-* MAJOR Version
+## Release
 
 ```bash
 bun release
+bun release:development
+bun release:staging
+bun release:production
 ```
+
 
 ## Deployment
 
